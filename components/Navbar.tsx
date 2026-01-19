@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Menu, X, LogIn, LogOut, User } from 'lucide-react';
 import { useAuth } from '../App';
-
+import logo from '../assets/logo.jpg'
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -24,7 +24,11 @@ export const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
             <Link to="/" className="flex items-center gap-2">
               <div className="p-2 bg-cyan-500/10 rounded-full border border-cyan-400">
-                <Zap className="h-6 w-6 text-cyan-400" />
+                  <img
+                    src={logo}
+                    alt="Prastuti Logo"
+                    className="h-10 w-10 object-contain"
+                  />
               </div>
               <span className="font-heading font-bold text-2xl tracking-wider text-white">
                 PRASTUTI<span className="text-cyan-400">'26</span>
