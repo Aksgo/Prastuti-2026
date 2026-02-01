@@ -1,69 +1,58 @@
 import { Event, TeamMember } from './types';
-
-export const FEST_DATES = "March 21-23, 2026";
+export const FEST_DATES = "March 21-22, 2026";
 export const FEST_NAME = "Prastuti '26";
 
 export const EVENTS: Event[] = [
   {
     id: '1',
-    title: 'Circuit Cipher',
+    title: 'Codigo',
     category: 'Competition',
-    description: 'Debug complex circuits in record time. A test of speed and fundamental electrical knowledge.',
+    description: 'Codigo is a competitive programming event involving the application of various data structures and algorithms.',
     date: 'March 21, 2026',
     time: '10:00 AM',
-    image: 'https://picsum.photos/800/600?random=1',
-    teamSize: 2
-  },
+    image: 'https://picsum.photos/800/600?random=2',
+    teamSize: 0
+  },  
   {
     id: '2',
-    title: 'RoboWars',
+    title: 'Hackoverflow',
     category: 'Competition',
-    description: 'Build your bot and battle it out in the arena. May the strongest alloy win.',
-    date: 'March 22, 2026',
+    description: 'With this event, we intend to give paricipants a kickstart in learning web',
+    date: 'March 21, 2026',
     time: '2:00 PM',
     image: 'https://picsum.photos/800/600?random=2',
     teamSize: 4
   },
   {
     id: '3',
-    title: 'IoT & Edge Computing',
+    title: 'Consilium',
     category: 'Workshop',
-    description: 'Hands-on workshop on connecting the physical world to the digital realm using ESP32.',
+    description: 'Hands-on hardware implementation. It aims to introduce young minds to the world of electronic design, concepts and real world application.',
     date: 'March 21, 2026',
     time: '11:00 AM',
     image: 'https://picsum.photos/800/600?random=3',
-    teamSize: 1
+    teamSize: 4
   },
   {
     id: '4',
-    title: 'Simulink Simulation',
-    category: 'Competition',
-    description: 'Model complex power systems using MATLAB Simulink.',
+    title: 'Student Alumni Interaction',
+    category: 'Guest Lecture',
+    description: 'Forever united by our alma mater, bound by memories, and connected by purpose.',
     date: 'March 23, 2026',
     time: '9:00 AM',
     image: 'https://picsum.photos/800/600?random=4',
-    teamSize: 2
-  },
-  {
-    id: '5',
-    title: 'Future of EV',
-    category: 'Guest Lecture',
-    description: 'A talk by industry leaders on the rapidly evolving landscape of Electric Vehicles in India.',
-    date: 'March 22, 2026',
-    time: '5:00 PM',
-    image: 'https://picsum.photos/800/600?random=5',
     teamSize: 0
   },
   {
-    id: '6',
-    title: 'Code-Electra',
-    category: 'Competition',
-    description: 'Algorithmic coding challenges with an electrical engineering twist.',
-    date: 'March 23, 2026',
-    time: '1:00 PM',
-    image: 'https://picsum.photos/800/600?random=6',
-    teamSize: 1
-  }
+    id: '5',
+    title: 'Codigo - CP Workshop 1',
+    category: 'Workshop',
+    description: 'Brushing up the Basics',
+    date: 'TBD',
+    time: 'TBD',
+    image: 'https://picsum.photos/800/600?random=4',
+    teamSize: 0
+  },
 ];
 
 export const TEAM: TeamMember[] = [

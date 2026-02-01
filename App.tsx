@@ -4,7 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Events } from './components/Events';
 import { Schedule } from './components/Schedule';
-import { Team } from './components/Team';
+import { OverallTeam } from './components/OverallTeam';
 import { Footer } from './components/Footer';
 import { Login } from './components/Auth';
 import { Registration } from './components/Registration';
@@ -52,7 +52,7 @@ const App: React.FC = () => {
               <Route path="/" element={<Hero />} />
               <Route path="/events" element={<Events />} />
               <Route path="/schedule" element={<Schedule />} />
-              <Route path="/team" element={<Team />} />
+              <Route path="/team" element={<OverallTeam/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Registration />} />
             </Routes>

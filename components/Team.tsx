@@ -1,14 +1,18 @@
 import React from 'react';
-import { TEAM } from '../constants';
-import { Linkedin, Mail } from 'lucide-react';
+import {TeamMember} from "../types";
 
-export const Team: React.FC = () => {
+interface TeamProps {
+  TEAM: TeamMember[];
+  title : string;
+}
+
+export const Team: React.FC<TeamProps> = ({TEAM,title}) => {
   return (
-    <div className="min-h-screen bg-slate-950 pt-24 pb-12 px-4">
+    <div className=" bg-slate-950 pt-24 pb-12 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-heading font-bold text-white mb-4">
-            Meet the <span className="text-cyan-400">Core Team</span>
+          <span className="text-cyan-400">{title}</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
             The minds behind the machines.
@@ -29,15 +33,6 @@ export const Team: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
                 <p className="text-cyan-400 text-sm font-medium mb-4">{member.role}</p>
-                
-                <div className="flex gap-4 mt-auto">
-                  <button className="text-slate-400 hover:text-white transition-colors">
-                    <Linkedin className="w-5 h-5" />
-                  </button>
-                  <button className="text-slate-400 hover:text-white transition-colors">
-                    <Mail className="w-5 h-5" />
-                  </button>
-                </div>
               </div>
             </div>
           ))}

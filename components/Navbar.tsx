@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Menu, X, LogIn, LogOut, User } from 'lucide-react';
 import { useAuth } from '../App';
-import logo from '../assets/logo.jpg'
+import logo from '../assets/logo.png'
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -23,7 +23,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
             <Link to="/" className="flex items-center gap-2">
-              <div className="p-2 bg-cyan-500/10 rounded-full border border-cyan-400">
+              <div className="p-2 bg-cyan-500/10 rounded-full border border-cyan-400 ">
                   <img
                     src={logo}
                     alt="Prastuti Logo"
@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
                 </Link>
               ))}
               
-              {user ? (
+              {/*{user ? (
                 <div className="flex items-center gap-4 ml-4 pl-4 border-l border-slate-700">
                   <span className="text-slate-300 text-sm flex items-center gap-2">
                      <User className="w-4 h-4 text-cyan-400" /> {user.name}
@@ -72,7 +72,7 @@ export const Navbar: React.FC = () => {
                 >
                   <LogIn className="w-4 h-4" /> Login
                 </Link>
-              )}
+              )}*/}
             </div>
           </div>
           
@@ -107,7 +107,7 @@ export const Navbar: React.FC = () => {
             ))}
             
             <div className="pt-4 mt-4 border-t border-slate-800">
-              {user ? (
+              {/*{user ? (
                 <div className="px-3 space-y-3">
                   <div className="text-slate-300 text-base font-medium flex items-center gap-2">
                     <User className="w-4 h-4 text-cyan-400" /> {user.name}
@@ -132,7 +132,7 @@ export const Navbar: React.FC = () => {
                     <LogIn className="w-4 h-4" /> Login
                   </Link>
                 </div>
-              )}
+              )}*/}
             </div>
           </div>
         </div>

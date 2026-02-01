@@ -71,10 +71,14 @@ export const Events: React.FC = () => {
                     <Clock className="w-4 h-4 text-cyan-500" />
                     <span>{event.time}</span>
                   </div>
+                  {
+                  (event.teamSize != 0)?(
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4 text-cyan-500" />
                     <span>Team: {event.teamSize === 0 ? 'Open' : event.teamSize}</span>
                   </div>
+                  ):(<div></div>)
+                  }
                 </div>
               </div>
             </div>
