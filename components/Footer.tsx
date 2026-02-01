@@ -21,8 +21,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-white font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-cyan-400 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Sponsors</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Campus Ambassador</a></li>
+              <li><a href="#" className="hover:text-cyan-400 transition-colors">Past Sponsors</a></li>
               <li><a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
@@ -32,8 +31,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm">
               <li>IIT (BHU), Varanasi</li>
               <li>Uttar Pradesh, India - 221005</li>
-              <li>contact@prastuti.org</li>
-              <li>+91 98765 43210</li>
+              <li>prastuti@itbhu.ac.in</li>
             </ul>
           </div>
         </div>
@@ -41,7 +39,6 @@ export const Footer: React.FC = () => {
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm">© 2026 Prastuti IIT BHU. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a>
             <a href="#" className="hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a>
             <a href="#" className="hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a>
             <a href="#" className="hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a>
