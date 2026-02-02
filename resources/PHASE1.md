@@ -3,15 +3,13 @@
 Welcome! 🎯 This is your starter roadmap if you are new to web development.
 In this phase, you will learn the three core building blocks of the web: HTML, **CSS (with Tailwind), and **JavaScript.
 
-> Tip: Don’t rush. Pick one topic at a time, follow the resources in order, and try to build tiny projects (like a portfolio, a landing page, or a quiz app) as you learn.
-
 ### 1. HTML – Structure of the Web 🧱
 
 HTML is how you tell the browser what is on the page (headings, paragraphs, images, links, forms, etc.).
 
 Resources:
 
-- 📺 Code playlist: https://youtube.com/playlist?list=PLLUjkbOx5di5qIPdd-4oJPnq9pP3fxN8G&si=5rI-duN3HUQeIRW1
+- 📺 Playlist: https://youtube.com/playlist?list=PLLUjkbOx5di5qIPdd-4oJPnq9pP3fxN8G&si=5rI-duN3HUQeIRW1
 - 🎬 One-shot video: https://youtu.be/YR7q48s2QoU?si=IvkjVezz5I23D3mX
 - 📚 Docs: https://developer.mozilla.org/en-US/docs/Web/HTML
 
@@ -37,10 +35,6 @@ Resources:
 
 ---
 
-### Suggested Learning Order ✅
-
-1. Start with HTML basics and build a simple static page.
-2. Add CSS to style that page; then try using Tailwind CSS for a more polished look.
-3. Move to JavaScript and make your page interactive (buttons, forms, simple apps).
-
 By the end of Phase One, you should be comfortable building a basic, responsive website and adding simple interactivity with JavaScript.
+
+---
