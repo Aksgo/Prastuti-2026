@@ -1,5 +1,5 @@
-import React, { useState, createContext, useContext } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, createContext, useContext} from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Events } from './components/Events';
@@ -8,6 +8,7 @@ import { OverallTeam } from './components/OverallTeam';
 import { Footer } from './components/Footer';
 import { Login } from './components/Auth';
 import { Registration } from './components/Registration';
+import { Analytics } from "@vercel/analytics/react"
 
 interface User {
   name: string;
@@ -30,6 +31,7 @@ export const useAuth = () => {
   }
   return context;
 };
+
 
 const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -58,6 +60,7 @@ const App: React.FC = () => {
             </Routes>
           </main>
           <Footer />
+          <Analytics/>
         </div>
       </Router>
     </AuthContext.Provider>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Menu, X, LogIn, LogOut, User } from 'lucide-react';
 import { useAuth } from '../App';
-import logo from '../assets/logo.png'
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -25,7 +24,7 @@ export const Navbar: React.FC = () => {
             <Link to="/" className="flex items-center gap-2">
               <div className="p-2 bg-cyan-500/10 rounded-full border border-cyan-400 ">
                   <img
-                    src={logo}
+                    src="/assets/logo.png"
                     alt="Prastuti Logo"
                     className="h-10 w-10 object-contain"
                   />
