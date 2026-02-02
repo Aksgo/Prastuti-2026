@@ -7,6 +7,8 @@ interface TeamProps {
 }
 
 export const Team: React.FC<TeamProps> = ({TEAM,title}) => {
+  const len = TEAM.length;
+  const isFour = len === 4;
   return (
     <div className=" bg-slate-950 pt-24 pb-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -19,9 +21,9 @@ export const Team: React.FC<TeamProps> = ({TEAM,title}) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {TEAM.map((member) => (
-            <div key={member.id} className="relative group">
+            <div key={member.id} className={`relative group ${isFour ? "w-96" : "w-80 flex-shrink-0"}`}>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
               <div className="relative bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col items-center text-center h-full">
                 <div className="w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-cyan-500/50 p-1">
