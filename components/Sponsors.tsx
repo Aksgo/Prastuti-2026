@@ -61,7 +61,6 @@ const Sponsors = () => {
                 src={sponsor.logo}
                 alt={sponsor.name}
                 className="h-16 md:h-20 object-contain mb-4
-                           grayscale hover:grayscale-0
                            transition duration-300"
               />
 
