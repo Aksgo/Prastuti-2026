@@ -34,7 +34,13 @@ export const Schedule: React.FC = () => {
           {/* Vertical Timeline Line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500/10 via-cyan-500/50 to-cyan-500/10 md:-translate-x-1/2"></div>
 
-          {dates.map((date) => (
+          {dates.map((date, dateIndex) => {
+            // Calculate starting index based on previous dates
+            const previousEventsCount = dates
+              .slice(0, dateIndex)
+              .reduce((count, d) => count + groupedEvents[d].length, 0);
+            
+            return (
             <div key={date} className="mb-16">
               <div className="sticky top-24 z-30 flex justify-center mb-10">
                 <div className="px-6 py-2 bg-slate-900/90 backdrop-blur-md border border-cyan-500/50 rounded-full text-cyan-400 font-bold shadow-[0_0_15px_rgba(6,182,212,0.2)]">
@@ -44,7 +50,8 @@ export const Schedule: React.FC = () => {
 
               <div className="space-y-12">
                 {groupedEvents[date].map((event, index) => {
-                  const isLeft = index % 2 === 0;
+                  const globalIndex = previousEventsCount + index;
+                  const isLeft = globalIndex % 2 === 0;
                   return (
                     <div key={event.id} className={`relative flex flex-col md:flex-row gap-8 ${isLeft ? 'md:flex-row-reverse' : ''} group`}>
                       
@@ -92,7 +99,8 @@ export const Schedule: React.FC = () => {
                 })}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
