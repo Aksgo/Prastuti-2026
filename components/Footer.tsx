@@ -57,8 +57,6 @@ export const Footer: React.FC = () => {
           <div className="flex gap-6">
             <a href="https://www.instagram.com/prastuti.iitbhu/?hl=en" target="_blank"
               rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a>
-            <a href="https://twitter.com/prastuti_iitbhu" target="_blank"
-              rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a>
             <a href="https://www.youtube.com/@prastuti2023" target="_blank"
               rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a>
             <a href="https://www.linkedin.com/company/prastuti" target="_blank"
