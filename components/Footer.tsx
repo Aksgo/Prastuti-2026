@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-import { Facebook, Twitter, Instagram, Youtube, Zap } from "lucide-react";
+import React from 'react';
+import { Facebook, Twitter, Instagram, Youtube, Zap, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
@@ -16,8 +15,8 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
-              The annual fest of Electrical Engineering Department, IIT (BHU),
-              Varanasi. Igniting minds, illuminating futures.
+              The annual fest of Electrical Engineering Department, IIT (BHU), Varanasi.
+              Igniting minds, illuminating futures.
             </p>
           </div>
 
@@ -25,7 +24,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-white font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/" className="hover:text-cyan-400 transition-colors">
+                <Link to="/about" className="hover:text-cyan-400 transition-colors">
                   About Us
                 </Link>
               </li>
@@ -56,15 +55,12 @@ export const Footer: React.FC = () => {
             © 2026 Prastuti IIT BHU. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-cyan-400 transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="hover:text-cyan-400 transition-colors">
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a href="#" className="hover:text-cyan-400 transition-colors">
-              <Youtube className="w-5 h-5" />
-            </a>
+            <a href="https://www.instagram.com/prastuti.iitbhu/?hl=en" target="_blank"
+              rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a>
+            <a href="https://www.youtube.com/@prastuti2023" target="_blank"
+              rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/company/prastuti" target="_blank"
+              rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a>
           </div>
         </div>
       </div>

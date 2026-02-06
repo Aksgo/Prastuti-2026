@@ -15,7 +15,7 @@ import { Login } from "./components/Auth";
 import { Registration } from "./components/Registration";
 import { Analytics } from "@vercel/analytics/react";
 import Sponsors from "./components/Sponsors";
-
+import { About } from './components/About';
 interface User {
   name: string;
   email: string;
@@ -62,14 +62,15 @@ const App: React.FC = () => {
               <Route path="/team" element={<OverallTeam />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Registration />} />
+              <Route path="/about" element={<About />} />
               <Route path="/sponsors" element={<Sponsors />} />
-            </Routes>
-          </main>
+            </Routes >
+          </main >
           <Footer />
           <Analytics />
-        </div>
-      </Router>
-    </AuthContext.Provider>
+        </div >
+      </Router >
+    </AuthContext.Provider >
   );
 };
 
