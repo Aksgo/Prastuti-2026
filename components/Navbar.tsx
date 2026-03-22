@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Zap, Menu, X, LogIn, LogOut, User } from 'lucide-react';
-import { useAuth } from '../App';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Zap, Menu, X, LogIn, LogOut, User } from "lucide-react";
+import { useAuth } from "../App";
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { user, logout } = useAuth();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Events', path: '/events' },
-    { name: 'Schedule', path: '/schedule' },
-    { name: 'Team', path: '/team' },
-    { name: 'About Us', path: '/about' },
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events" },
+    { name: "Schedule", path: "/schedule" },
+    { name: "Team", path: "/team" },
+    { name: "About Us", path: "/about" },
+    { name: "Speakers", path: "/speakers" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -24,18 +25,18 @@ export const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
             <Link to="/" className="flex items-center gap-2">
               <div className="p-2 bg-cyan-500/10 rounded-full border border-cyan-400 ">
-                  <img
-                    src="/assets/logo.png"
-                    alt="Prastuti Logo"
-                    className="h-10 w-10 object-contain"
-                  />
+                <img
+                  src="/assets/logo.png"
+                  alt="Prastuti Logo"
+                  className="h-10 w-10 object-contain"
+                />
               </div>
               <span className="font-heading font-bold text-2xl tracking-wider text-white">
                 PRASTUTI<span className="text-cyan-400">'26</span>
               </span>
             </Link>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
               {navLinks.map((link) => (
@@ -44,14 +45,14 @@ export const Navbar: React.FC = () => {
                   to={link.path}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive(link.path)
-                      ? 'text-cyan-400 bg-cyan-900/20 border border-cyan-500/30'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                      ? "text-cyan-400 bg-cyan-900/20 border border-cyan-500/30"
+                      : "text-slate-300 hover:text-white hover:bg-slate-800"
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              
+
               {/*{user ? (
                 <div className="flex items-center gap-4 ml-4 pl-4 border-l border-slate-700">
                   <span className="text-slate-300 text-sm flex items-center gap-2">
@@ -75,13 +76,17 @@ export const Navbar: React.FC = () => {
               )}*/}
             </div>
           </div>
-          
+
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="bg-slate-800 inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-700 focus:outline-none"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -98,14 +103,14 @@ export const Navbar: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive(link.path)
-                    ? 'text-cyan-400 bg-cyan-900/20'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                    ? "text-cyan-400 bg-cyan-900/20"
+                    : "text-slate-300 hover:text-white hover:bg-slate-800"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            
+
             <div className="pt-4 mt-4 border-t border-slate-800">
               {/*{user ? (
                 <div className="px-3 space-y-3">

@@ -1,7 +1,7 @@
 export interface Event {
   id: string;
   title: string;
-  category: 'Competition' | 'Workshop' | 'Guest Lecture' | 'Ceremony' ;
+  category: "Competition" | "Workshop" | "Guest Lecture" | "Ceremony";
   description: string;
   date: string;
   time: string;
@@ -15,4 +15,13 @@ export interface TeamMember {
   role: string;
   image: string;
   linkedin?: string;
+}
+
+export interface Speaker {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+  linkedin?: string;
+  about: string;
 }
